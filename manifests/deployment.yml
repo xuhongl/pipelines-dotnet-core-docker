@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: xuhonglpipelinesdotnetcoredocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xuhonglpipelinesdotnetcoredocker
+  template:
+    metadata:
+      labels:
+        app: xuhonglpipelinesdotnetcoredocker 
+    spec:
+      containers:
+        - name: xuhonglpipelinesdotnetcoredocker 
+          image: xxxuhong.azurecr.io/xuhonglpipelinesdotnetcoredocker
+          ports:
+          - containerPort: 80
